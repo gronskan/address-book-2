@@ -5,7 +5,7 @@ function AddressBook() {
 }
 
 AddressBook.prototype.addContact = function(contact) {
-  contact.id = this.asssignId();
+  contact.id = this.assignId();
   this.contacts.push(contact);
 }
 
@@ -55,7 +55,7 @@ function displayContactDetails(addressBookToDisplay) {
   var contactsList = $("ul#contacts");
   var htmlForContactInfo = "";
   addressBookToDisplay.contacts.forEach(function(contact) {
-    htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contactLastName + "</li>";
+    htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
   });
   contactsList.html(htmlForContactInfo);
 };
